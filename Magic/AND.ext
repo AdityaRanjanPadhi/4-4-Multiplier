@@ -1,0 +1,17 @@
+timestamp 1668119437
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use NAND NAND_0 1 0 1 0 1 50
+use 2INV 2INV_0 1 0 42 0 1 -41
+node "m1_33_0#" 0 3243 33 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 69 36 0 0 0 0
+node "m1_33_33#" 0 1692 33 33 m1 0 0 0 0 0 0 0 0 0 0 0 0 36 26 0 0 0 0
+node "m1_33_80#" 0 3149 33 80 m1 0 0 0 0 0 0 0 0 0 0 0 0 67 44 0 0 0 0
+merge "2INV_0/gnd" "NAND_0/gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 0
+merge "NAND_0/gnd" "m1_33_0#"
+merge "2INV_0/a_7_74#" "NAND_0/a_13_6#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 0
+merge "NAND_0/a_13_6#" "m1_33_33#"
+merge "2INV_0/vdd" "NAND_0/vdd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 0
+merge "NAND_0/vdd" "m1_33_80#"

@@ -1,0 +1,86 @@
+$date
+	Sat Nov 12 02:58:40 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module Full_Adder_tb $end
+$var wire 1 ! Sum $end
+$var wire 1 " Carry $end
+$var reg 1 # A $end
+$var reg 1 $ B $end
+$var reg 1 % CI $end
+$scope module UUT $end
+$var wire 1 # A $end
+$var wire 1 $ B $end
+$var wire 1 % CI $end
+$var wire 1 " Carry $end
+$var wire 1 & x3 $end
+$var wire 1 ' x2 $end
+$var wire 1 ( x1 $end
+$var wire 1 ! Sum $end
+$scope module inst1 $end
+$var wire 1 # A $end
+$var wire 1 $ B $end
+$var wire 1 ' Carry $end
+$var wire 1 ( Sum $end
+$upscope $end
+$scope module inst2 $end
+$var wire 1 % A $end
+$var wire 1 ( B $end
+$var wire 1 & Carry $end
+$var wire 1 ! Sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#1000
+1!
+1(
+1$
+#2000
+0$
+1#
+#3000
+1"
+0!
+1'
+0(
+1$
+#4000
+0"
+1!
+0'
+1%
+0$
+0#
+#5000
+1"
+1&
+0!
+1(
+1$
+#6000
+0$
+1#
+#7000
+0&
+1!
+1'
+0(
+1$
+#8000

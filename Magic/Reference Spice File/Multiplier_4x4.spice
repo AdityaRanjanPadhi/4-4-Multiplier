@@ -1,0 +1,1960 @@
+* SPICE3 file created from Multiplier_4x4.ext - technology: scmos
+
+.option scale=1u
+.include 22nm_MGK.pm
+.option TEMP = 27C
+.param LAMBDA = 22n
+.param width_N = {LAMBDA}
+.param width_P = {2.5*width_N}
+
+
+vpower vdd 0 1.8
+vgnd vss 0 0
+
+vA A0 vss pulse 0 1.8 0 100p 100p 50n 100n
+vB A1 vss pulse 0 1.8 0 100p 100p 100n 200n
+vC A2 vss pulse 0 1.8 0 100p 100p 200n 400n
+vD A3 vss pulse 0 1.8 0 100p 100p 400n 800n
+vE B0 vss pulse 0 1.8 0 100p 100p 800n 1600n
+vF B1 vss pulse 0 1.8 0 100p 100p 1600n 3200n
+vG B2 vss pulse 0 1.8 0 100p 100p 3200n 6400n
+vH B3 vss pulse 0 1.8 0 100p 100p 6400n 12800n
+
+M1000 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1001 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/m1_100_545# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1002 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1003 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# Adder_4_0/m1_100_545# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1004 Adder_4_0/Full_Adder_0/m1_550_349# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1005 Adder_4_0/Full_Adder_0/m1_550_349# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1006 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1007 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1008 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/m1_100_545# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1009 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/m1_100_545# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1010 Adder_4_0/Full_Adder_0/m1_550_446# m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1011 Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1012 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1013 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_63_n51# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_79_n51# m1_373_730# Adder_4_0/Full_Adder_0/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1015 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# Adder_4_0/m1_100_545# Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1016 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/gnd Adder_4_0/m1_100_545# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1018 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1019 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1020 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1021 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1022 Adder_4_0/Full_Adder_0/m1_772_434# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1023 Adder_4_0/Full_Adder_0/m1_772_434# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1024 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1025 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1026 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1027 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1028 m1_53_n395# Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_71_27# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1029 m1_53_n395# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1030 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1031 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_63_n51# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1032 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_79_n51# Adder_4_0/m1_340_335# m1_53_n395# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1033 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# Adder_4_0/Full_Adder_0/m1_550_446# m1_53_n395# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1034 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/gnd Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1035 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_71_27# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1036 Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_0/OR_0/m1_35_29# Adder_4_0/Full_Adder_0/OR_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_0/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1037 Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_0/OR_0/m1_35_29# Adder_4_0/Full_Adder_0/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1038 Adder_4_0/Full_Adder_0/OR_0/NOR_0/gnd Adder_4_0/Full_Adder_0/m1_772_434# Adder_4_0/Full_Adder_0/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1039 Adder_4_0/Full_Adder_0/OR_0/m1_35_29# Adder_4_0/Full_Adder_0/m1_550_349# Adder_4_0/Full_Adder_0/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1040 Adder_4_0/Full_Adder_0/OR_0/m1_35_29# Adder_4_0/Full_Adder_0/m1_772_434# Adder_4_0/Full_Adder_0/OR_0/NOR_0/a_13_5# Adder_4_0/Full_Adder_0/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1041 Adder_4_0/Full_Adder_0/OR_0/NOR_0/a_13_5# Adder_4_0/Full_Adder_0/m1_550_349# Adder_4_0/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_0/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1042 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd m1_444_710# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1043 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# m1_912_711# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1044 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# m1_444_710# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1045 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_912_711# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1046 Adder_4_0/Full_Adder_1/m1_550_349# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1047 Adder_4_0/Full_Adder_1/m1_550_349# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1048 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# m1_444_710# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1049 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# m1_444_710# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1050 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# m1_912_711# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1051 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# m1_912_711# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1052 Adder_4_0/Full_Adder_1/m1_550_446# m1_444_710# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1053 Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1054 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1055 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_63_n51# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1056 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_79_n51# m1_444_710# Adder_4_0/Full_Adder_1/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1057 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# m1_912_711# Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1058 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/gnd m1_912_711# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1059 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1060 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/m1_717_336# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1061 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1062 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/m1_717_336# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1063 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1064 Adder_4_0/Full_Adder_1/m1_772_434# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1065 Adder_4_0/Full_Adder_1/m1_772_434# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1066 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/m1_717_336# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1067 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/m1_717_336# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1068 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1069 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1070 m1_76_n395# Adder_4_0/m1_717_336# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_71_27# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1071 m1_76_n395# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1072 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1073 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_63_n51# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1074 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_79_n51# Adder_4_0/m1_717_336# m1_76_n395# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1075 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# Adder_4_0/Full_Adder_1/m1_550_446# m1_76_n395# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1076 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/gnd Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1077 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_71_27# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1078 Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_1/OR_0/m1_35_29# Adder_4_0/Full_Adder_1/OR_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_1/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1079 Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_1/OR_0/m1_35_29# Adder_4_0/Full_Adder_1/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1080 Adder_4_0/Full_Adder_1/OR_0/NOR_0/gnd Adder_4_0/Full_Adder_1/m1_772_434# Adder_4_0/Full_Adder_1/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1081 Adder_4_0/Full_Adder_1/OR_0/m1_35_29# Adder_4_0/Full_Adder_1/m1_550_349# Adder_4_0/Full_Adder_1/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1082 Adder_4_0/Full_Adder_1/OR_0/m1_35_29# Adder_4_0/Full_Adder_1/m1_772_434# Adder_4_0/Full_Adder_1/OR_0/NOR_0/a_13_5# Adder_4_0/Full_Adder_1/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1083 Adder_4_0/Full_Adder_1/OR_0/NOR_0/a_13_5# Adder_4_0/Full_Adder_1/m1_550_349# Adder_4_0/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_1/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1084 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd m1_287_713# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1085 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# gnd Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1086 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# m1_287_713# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1087 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# gnd Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1088 Adder_4_0/Full_Adder_2/m1_550_349# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1089 Adder_4_0/Full_Adder_2/m1_550_349# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1090 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# m1_287_713# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1091 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# m1_287_713# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1092 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# gnd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1093 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# gnd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1094 Adder_4_0/Full_Adder_2/m1_550_446# m1_287_713# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1095 Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1096 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1097 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_63_n51# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1098 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_79_n51# m1_287_713# Adder_4_0/Full_Adder_2/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1099 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# gnd Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1100 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/gnd gnd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1101 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1102 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1103 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1104 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1105 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1106 Adder_4_0/Full_Adder_2/m1_772_434# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1107 Adder_4_0/Full_Adder_2/m1_772_434# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1108 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1109 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1110 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1111 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1112 m1_10_n396# Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_71_27# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1113 m1_10_n396# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1114 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1115 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_63_n51# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1116 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_79_n51# Adder_4_0/m1_n35_334# m1_10_n396# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1117 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# Adder_4_0/Full_Adder_2/m1_550_446# m1_10_n396# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1118 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/gnd Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1119 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_71_27# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1120 m1_n12_n395# Adder_4_0/Full_Adder_2/OR_0/m1_35_29# Adder_4_0/Full_Adder_2/OR_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_2/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1121 m1_n12_n395# Adder_4_0/Full_Adder_2/OR_0/m1_35_29# Adder_4_0/Full_Adder_2/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1122 Adder_4_0/Full_Adder_2/OR_0/NOR_0/gnd Adder_4_0/Full_Adder_2/m1_772_434# Adder_4_0/Full_Adder_2/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1123 Adder_4_0/Full_Adder_2/OR_0/m1_35_29# Adder_4_0/Full_Adder_2/m1_550_349# Adder_4_0/Full_Adder_2/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1124 Adder_4_0/Full_Adder_2/OR_0/m1_35_29# Adder_4_0/Full_Adder_2/m1_772_434# Adder_4_0/Full_Adder_2/OR_0/NOR_0/a_13_5# Adder_4_0/Full_Adder_2/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1125 Adder_4_0/Full_Adder_2/OR_0/NOR_0/a_13_5# Adder_4_0/Full_Adder_2/m1_550_349# Adder_4_0/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_2/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1126 Adder_4_0/Half_Adder_0/AND_0/NAND_0/vdd m1_478_710# Adder_4_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1127 Adder_4_0/Half_Adder_0/AND_0/m1_33_33# m1_935_711# Adder_4_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1128 Adder_4_0/Half_Adder_0/AND_0/m1_33_33# m1_478_710# Adder_4_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1129 Adder_4_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_935_711# Adder_4_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1130 Adder_4_0/m1_717_336# Adder_4_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_0/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1131 Adder_4_0/m1_717_336# Adder_4_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1132 Adder_4_0/Half_Adder_0/XOR_0/a_51_n59# m1_478_710# Adder_4_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1133 Adder_4_0/Half_Adder_0/XOR_0/a_51_n59# m1_478_710# Adder_4_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1134 Adder_4_0/Half_Adder_0/XOR_0/a_59_n30# m1_935_711# Adder_4_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1135 Adder_4_0/Half_Adder_0/XOR_0/a_59_n30# m1_935_711# Adder_4_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1136 P1 m1_478_710# Adder_4_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1137 P1 Adder_4_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1138 Adder_4_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Half_Adder_0/XOR_0/a_56_27# Adder_4_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1139 Adder_4_0/Half_Adder_0/XOR_0/a_63_n51# Adder_4_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1140 Adder_4_0/Half_Adder_0/XOR_0/a_79_n51# m1_478_710# P1 Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1141 Adder_4_0/Half_Adder_0/XOR_0/a_56_27# m1_935_711# P1 Adder_4_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1142 Adder_4_0/Half_Adder_0/XOR_0/gnd m1_935_711# Adder_4_0/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1143 Adder_4_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1144 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1145 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1146 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1147 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1148 Adder_4_1/Full_Adder_0/m1_550_349# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1149 Adder_4_1/Full_Adder_0/m1_550_349# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1150 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1151 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1152 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1153 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1154 Adder_4_1/Full_Adder_0/m1_550_446# m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1155 Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1156 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1157 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_63_n51# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1158 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_79_n51# m1_n486_n376# Adder_4_1/Full_Adder_0/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1159 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1160 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/gnd Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1161 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1162 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1163 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1164 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1165 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1166 Adder_4_1/Full_Adder_0/m1_772_434# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1167 Adder_4_1/Full_Adder_0/m1_772_434# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1168 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1169 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1170 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1171 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1172 m1_n806_n1488# Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_71_27# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1173 m1_n806_n1488# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1174 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1175 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_63_n51# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1176 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_79_n51# Adder_4_1/m1_340_335# m1_n806_n1488# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1177 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# Adder_4_1/Full_Adder_0/m1_550_446# m1_n806_n1488# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1178 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/gnd Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1179 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_71_27# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1180 Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_0/OR_0/m1_35_29# Adder_4_1/Full_Adder_0/OR_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_0/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1181 Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_0/OR_0/m1_35_29# Adder_4_1/Full_Adder_0/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1182 Adder_4_1/Full_Adder_0/OR_0/NOR_0/gnd Adder_4_1/Full_Adder_0/m1_772_434# Adder_4_1/Full_Adder_0/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1183 Adder_4_1/Full_Adder_0/OR_0/m1_35_29# Adder_4_1/Full_Adder_0/m1_550_349# Adder_4_1/Full_Adder_0/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1184 Adder_4_1/Full_Adder_0/OR_0/m1_35_29# Adder_4_1/Full_Adder_0/m1_772_434# Adder_4_1/Full_Adder_0/OR_0/NOR_0/a_13_5# Adder_4_1/Full_Adder_0/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1185 Adder_4_1/Full_Adder_0/OR_0/NOR_0/a_13_5# Adder_4_1/Full_Adder_0/m1_550_349# Adder_4_1/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_0/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1186 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd m1_n415_n396# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1187 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# m1_53_n395# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1188 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# m1_n415_n396# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1189 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_53_n395# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1190 Adder_4_1/Full_Adder_1/m1_550_349# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1191 Adder_4_1/Full_Adder_1/m1_550_349# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1192 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# m1_n415_n396# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1193 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# m1_n415_n396# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1194 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# m1_53_n395# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1195 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# m1_53_n395# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1196 Adder_4_1/Full_Adder_1/m1_550_446# m1_n415_n396# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1197 Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1198 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1199 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_63_n51# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1200 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_79_n51# m1_n415_n396# Adder_4_1/Full_Adder_1/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1201 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# m1_53_n395# Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1202 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/gnd m1_53_n395# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1203 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1204 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/m1_717_336# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1205 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1206 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/m1_717_336# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1207 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1208 Adder_4_1/Full_Adder_1/m1_772_434# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1209 Adder_4_1/Full_Adder_1/m1_772_434# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1210 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/m1_717_336# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1211 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/m1_717_336# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1212 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1213 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1214 m1_n783_n1488# Adder_4_1/m1_717_336# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_71_27# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1215 m1_n783_n1488# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1216 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1217 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_63_n51# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1218 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_79_n51# Adder_4_1/m1_717_336# m1_n783_n1488# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1219 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# Adder_4_1/Full_Adder_1/m1_550_446# m1_n783_n1488# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1220 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/gnd Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1221 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_71_27# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1222 Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_1/OR_0/m1_35_29# Adder_4_1/Full_Adder_1/OR_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_1/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1223 Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_1/OR_0/m1_35_29# Adder_4_1/Full_Adder_1/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1224 Adder_4_1/Full_Adder_1/OR_0/NOR_0/gnd Adder_4_1/Full_Adder_1/m1_772_434# Adder_4_1/Full_Adder_1/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1225 Adder_4_1/Full_Adder_1/OR_0/m1_35_29# Adder_4_1/Full_Adder_1/m1_550_349# Adder_4_1/Full_Adder_1/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1226 Adder_4_1/Full_Adder_1/OR_0/m1_35_29# Adder_4_1/Full_Adder_1/m1_772_434# Adder_4_1/Full_Adder_1/OR_0/NOR_0/a_13_5# Adder_4_1/Full_Adder_1/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1227 Adder_4_1/Full_Adder_1/OR_0/NOR_0/a_13_5# Adder_4_1/Full_Adder_1/m1_550_349# Adder_4_1/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_1/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1228 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd m1_n572_n393# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1229 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# m1_n12_n395# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1230 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# m1_n572_n393# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1231 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_n12_n395# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1232 Adder_4_1/Full_Adder_2/m1_550_349# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1233 Adder_4_1/Full_Adder_2/m1_550_349# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1234 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# m1_n572_n393# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1235 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# m1_n572_n393# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1236 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# m1_n12_n395# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1237 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# m1_n12_n395# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1238 Adder_4_1/Full_Adder_2/m1_550_446# m1_n572_n393# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1239 Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1240 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1241 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_63_n51# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1242 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_79_n51# m1_n572_n393# Adder_4_1/Full_Adder_2/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1243 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# m1_n12_n395# Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1244 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/gnd m1_n12_n395# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1245 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1246 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1247 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1248 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1249 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1250 Adder_4_1/Full_Adder_2/m1_772_434# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1251 Adder_4_1/Full_Adder_2/m1_772_434# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1252 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1253 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1254 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1255 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1256 m1_n849_n1489# Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_71_27# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1257 m1_n849_n1489# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1258 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1259 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_63_n51# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1260 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_79_n51# Adder_4_1/m1_n35_334# m1_n849_n1489# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1261 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# Adder_4_1/Full_Adder_2/m1_550_446# m1_n849_n1489# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1262 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/gnd Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1263 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_71_27# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1264 m1_n871_n1488# Adder_4_1/Full_Adder_2/OR_0/m1_35_29# Adder_4_1/Full_Adder_2/OR_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_2/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1265 m1_n871_n1488# Adder_4_1/Full_Adder_2/OR_0/m1_35_29# Adder_4_1/Full_Adder_2/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1266 Adder_4_1/Full_Adder_2/OR_0/NOR_0/gnd Adder_4_1/Full_Adder_2/m1_772_434# Adder_4_1/Full_Adder_2/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1267 Adder_4_1/Full_Adder_2/OR_0/m1_35_29# Adder_4_1/Full_Adder_2/m1_550_349# Adder_4_1/Full_Adder_2/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1268 Adder_4_1/Full_Adder_2/OR_0/m1_35_29# Adder_4_1/Full_Adder_2/m1_772_434# Adder_4_1/Full_Adder_2/OR_0/NOR_0/a_13_5# Adder_4_1/Full_Adder_2/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1269 Adder_4_1/Full_Adder_2/OR_0/NOR_0/a_13_5# Adder_4_1/Full_Adder_2/m1_550_349# Adder_4_1/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_2/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1270 Adder_4_1/Half_Adder_0/AND_0/NAND_0/vdd m1_n381_n396# Adder_4_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1271 Adder_4_1/Half_Adder_0/AND_0/m1_33_33# m1_76_n395# Adder_4_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1272 Adder_4_1/Half_Adder_0/AND_0/m1_33_33# m1_n381_n396# Adder_4_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1273 Adder_4_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_76_n395# Adder_4_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1274 Adder_4_1/m1_717_336# Adder_4_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_1/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1275 Adder_4_1/m1_717_336# Adder_4_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1276 Adder_4_1/Half_Adder_0/XOR_0/a_51_n59# m1_n381_n396# Adder_4_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1277 Adder_4_1/Half_Adder_0/XOR_0/a_51_n59# m1_n381_n396# Adder_4_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1278 Adder_4_1/Half_Adder_0/XOR_0/a_59_n30# m1_76_n395# Adder_4_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1279 Adder_4_1/Half_Adder_0/XOR_0/a_59_n30# m1_76_n395# Adder_4_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1280 P2 m1_n381_n396# Adder_4_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1281 P2 Adder_4_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1282 Adder_4_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Half_Adder_0/XOR_0/a_56_27# Adder_4_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1283 Adder_4_1/Half_Adder_0/XOR_0/a_63_n51# Adder_4_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1284 Adder_4_1/Half_Adder_0/XOR_0/a_79_n51# m1_n381_n396# P2 Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1285 Adder_4_1/Half_Adder_0/XOR_0/a_56_27# m1_76_n395# P2 Adder_4_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1286 Adder_4_1/Half_Adder_0/XOR_0/gnd m1_76_n395# Adder_4_1/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1287 Adder_4_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1288 AND_0/NAND_0/vdd A0 AND_0/m1_33_33# AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1289 AND_0/m1_33_33# B1 AND_0/NAND_0/vdd AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1290 AND_0/m1_33_33# A0 AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1291 AND_0/NAND_0/a_13_n43# B1 AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1292 m1_935_711# AND_0/m1_33_33# AND_0/2INV_0/a_6_87# AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1293 m1_935_711# AND_0/m1_33_33# AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1294 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd m1_n1345_n1469# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1295 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/m1_100_545# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1296 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# m1_n1345_n1469# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1297 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/a_13_n43# Adder_4_2/m1_100_545# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1298 Adder_4_2/Full_Adder_0/m1_550_349# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1299 Adder_4_2/Full_Adder_0/m1_550_349# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1300 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# m1_n1345_n1469# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1301 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# m1_n1345_n1469# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1302 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/m1_100_545# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1303 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/m1_100_545# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1304 Adder_4_2/Full_Adder_0/m1_550_446# m1_n1345_n1469# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1305 Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1306 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1307 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_63_n51# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1308 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_79_n51# m1_n1345_n1469# Adder_4_2/Full_Adder_0/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1309 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# Adder_4_2/m1_100_545# Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1310 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/gnd Adder_4_2/m1_100_545# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1311 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1312 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1313 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1314 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1315 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1316 Adder_4_2/Full_Adder_0/m1_772_434# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1317 Adder_4_2/Full_Adder_0/m1_772_434# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1318 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1319 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1320 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1321 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1322 P5 Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_71_27# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1323 P5 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1324 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1325 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_63_n51# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1326 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_79_n51# Adder_4_2/m1_340_335# P5 Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1327 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# Adder_4_2/Full_Adder_0/m1_550_446# P5 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1328 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/gnd Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1329 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_71_27# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1330 Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_0/OR_0/m1_35_29# Adder_4_2/Full_Adder_0/OR_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_0/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1331 Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_0/OR_0/m1_35_29# Adder_4_2/Full_Adder_0/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1332 Adder_4_2/Full_Adder_0/OR_0/NOR_0/gnd Adder_4_2/Full_Adder_0/m1_772_434# Adder_4_2/Full_Adder_0/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1333 Adder_4_2/Full_Adder_0/OR_0/m1_35_29# Adder_4_2/Full_Adder_0/m1_550_349# Adder_4_2/Full_Adder_0/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1334 Adder_4_2/Full_Adder_0/OR_0/m1_35_29# Adder_4_2/Full_Adder_0/m1_772_434# Adder_4_2/Full_Adder_0/OR_0/NOR_0/a_13_5# Adder_4_2/Full_Adder_0/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1335 Adder_4_2/Full_Adder_0/OR_0/NOR_0/a_13_5# Adder_4_2/Full_Adder_0/m1_550_349# Adder_4_2/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_0/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1336 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd m1_n1274_n1489# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1337 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# m1_n806_n1488# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1338 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# m1_n1274_n1489# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1339 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_n806_n1488# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1340 Adder_4_2/Full_Adder_1/m1_550_349# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1341 Adder_4_2/Full_Adder_1/m1_550_349# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1342 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# m1_n1274_n1489# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1343 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# m1_n1274_n1489# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1344 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# m1_n806_n1488# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1345 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# m1_n806_n1488# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1346 Adder_4_2/Full_Adder_1/m1_550_446# m1_n1274_n1489# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1347 Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1348 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1349 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_63_n51# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1350 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_79_n51# m1_n1274_n1489# Adder_4_2/Full_Adder_1/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1351 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# m1_n806_n1488# Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1352 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/gnd m1_n806_n1488# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1353 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1354 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/m1_717_336# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1355 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1356 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/m1_717_336# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1357 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1358 Adder_4_2/Full_Adder_1/m1_772_434# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1359 Adder_4_2/Full_Adder_1/m1_772_434# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1360 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/m1_717_336# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1361 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/m1_717_336# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1362 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1363 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1364 P4 Adder_4_2/m1_717_336# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_71_27# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1365 P4 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1366 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1367 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_63_n51# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1368 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_79_n51# Adder_4_2/m1_717_336# P4 Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1369 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# Adder_4_2/Full_Adder_1/m1_550_446# P4 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1370 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/gnd Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1371 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_71_27# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1372 Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_1/OR_0/m1_35_29# Adder_4_2/Full_Adder_1/OR_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_1/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1373 Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_1/OR_0/m1_35_29# Adder_4_2/Full_Adder_1/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1374 Adder_4_2/Full_Adder_1/OR_0/NOR_0/gnd Adder_4_2/Full_Adder_1/m1_772_434# Adder_4_2/Full_Adder_1/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1375 Adder_4_2/Full_Adder_1/OR_0/m1_35_29# Adder_4_2/Full_Adder_1/m1_550_349# Adder_4_2/Full_Adder_1/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1376 Adder_4_2/Full_Adder_1/OR_0/m1_35_29# Adder_4_2/Full_Adder_1/m1_772_434# Adder_4_2/Full_Adder_1/OR_0/NOR_0/a_13_5# Adder_4_2/Full_Adder_1/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1377 Adder_4_2/Full_Adder_1/OR_0/NOR_0/a_13_5# Adder_4_2/Full_Adder_1/m1_550_349# Adder_4_2/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_1/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1378 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd m1_n1431_n1486# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1379 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# m1_n871_n1488# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1380 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# m1_n1431_n1486# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1381 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_n871_n1488# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1382 Adder_4_2/Full_Adder_2/m1_550_349# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1383 Adder_4_2/Full_Adder_2/m1_550_349# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1384 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# m1_n1431_n1486# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1385 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# m1_n1431_n1486# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1386 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# m1_n871_n1488# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1387 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# m1_n871_n1488# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1388 Adder_4_2/Full_Adder_2/m1_550_446# m1_n1431_n1486# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1389 Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1390 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1391 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_63_n51# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1392 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_79_n51# m1_n1431_n1486# Adder_4_2/Full_Adder_2/m1_550_446# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1393 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# m1_n871_n1488# Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1394 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/gnd m1_n871_n1488# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1395 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1396 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1397 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1398 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1399 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/a_13_n43# Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1400 Adder_4_2/Full_Adder_2/m1_772_434# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1401 Adder_4_2/Full_Adder_2/m1_772_434# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1402 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1403 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1404 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1405 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1406 P6 Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_71_27# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1407 P6 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1408 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1409 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_63_n51# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1410 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_79_n51# Adder_4_2/m1_n35_334# P6 Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1411 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# Adder_4_2/Full_Adder_2/m1_550_446# P6 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1412 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/gnd Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1413 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_71_27# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1414 P7 Adder_4_2/Full_Adder_2/OR_0/m1_35_29# Adder_4_2/Full_Adder_2/OR_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_2/OR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1415 P7 Adder_4_2/Full_Adder_2/OR_0/m1_35_29# Adder_4_2/Full_Adder_2/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=150 ps=90
+M1416 Adder_4_2/Full_Adder_2/OR_0/NOR_0/gnd Adder_4_2/Full_Adder_2/m1_772_434# Adder_4_2/Full_Adder_2/OR_0/m1_35_29# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=60 ps=32
+M1417 Adder_4_2/Full_Adder_2/OR_0/m1_35_29# Adder_4_2/Full_Adder_2/m1_550_349# Adder_4_2/Full_Adder_2/OR_0/NOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1418 Adder_4_2/Full_Adder_2/OR_0/m1_35_29# Adder_4_2/Full_Adder_2/m1_772_434# Adder_4_2/Full_Adder_2/OR_0/NOR_0/a_13_5# Adder_4_2/Full_Adder_2/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=280 pd=94 as=240 ps=92
+M1419 Adder_4_2/Full_Adder_2/OR_0/NOR_0/a_13_5# Adder_4_2/Full_Adder_2/m1_550_349# Adder_4_2/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_2/OR_0/NOR_0/w_0_n1# pmos w=40 l=2
++  ad=0 pd=0 as=200 ps=90
+M1420 Adder_4_2/Half_Adder_0/AND_0/NAND_0/vdd m1_n1240_n1489# Adder_4_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1421 Adder_4_2/Half_Adder_0/AND_0/m1_33_33# m1_n783_n1488# Adder_4_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Half_Adder_0/AND_0/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1422 Adder_4_2/Half_Adder_0/AND_0/m1_33_33# m1_n1240_n1489# Adder_4_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1423 Adder_4_2/Half_Adder_0/AND_0/NAND_0/a_13_n43# m1_n783_n1488# Adder_4_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1424 Adder_4_2/m1_717_336# Adder_4_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_2/Half_Adder_0/AND_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1425 Adder_4_2/m1_717_336# Adder_4_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1426 Adder_4_2/Half_Adder_0/XOR_0/a_51_n59# m1_n1240_n1489# Adder_4_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=341 ps=143
+M1427 Adder_4_2/Half_Adder_0/XOR_0/a_51_n59# m1_n1240_n1489# Adder_4_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=200 ps=120
+M1428 Adder_4_2/Half_Adder_0/XOR_0/a_59_n30# m1_n783_n1488# Adder_4_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1429 Adder_4_2/Half_Adder_0/XOR_0/a_59_n30# m1_n783_n1488# Adder_4_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1430 P3 m1_n1240_n1489# Adder_4_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=240 pd=92 as=240 ps=92
+M1431 P3 Adder_4_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Half_Adder_0/XOR_0/a_63_n51# Gnd nmos w=10 l=2
++  ad=60 pd=32 as=60 ps=32
+M1432 Adder_4_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Half_Adder_0/XOR_0/a_56_27# Adder_4_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=400 ps=180
+M1433 Adder_4_2/Half_Adder_0/XOR_0/a_63_n51# Adder_4_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Half_Adder_0/XOR_0/gnd Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1434 Adder_4_2/Half_Adder_0/XOR_0/a_79_n51# m1_n1240_n1489# P3 Gnd nmos w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1435 Adder_4_2/Half_Adder_0/XOR_0/a_56_27# m1_n783_n1488# P3 Adder_4_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1436 Adder_4_2/Half_Adder_0/XOR_0/gnd m1_n783_n1488# Adder_4_2/Half_Adder_0/XOR_0/a_79_n51# Gnd nmos w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1437 Adder_4_2/Half_Adder_0/XOR_0/a_71_27# Adder_4_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Half_Adder_0/XOR_0/w_50_21# pmos w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1438 AND_1/NAND_0/vdd A0 AND_1/m1_33_33# AND_1/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1439 AND_1/m1_33_33# B2 AND_1/NAND_0/vdd AND_1/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1440 AND_1/m1_33_33# A0 AND_1/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1441 AND_1/NAND_0/a_13_n43# B2 AND_1/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1442 m1_912_711# AND_1/m1_33_33# AND_1/2INV_0/a_6_87# AND_1/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1443 m1_912_711# AND_1/m1_33_33# AND_1/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1444 AND_2/NAND_0/vdd A0 AND_2/m1_33_33# AND_2/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1445 AND_2/m1_33_33# B3 AND_2/NAND_0/vdd AND_2/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1446 AND_2/m1_33_33# A0 AND_2/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1447 AND_2/NAND_0/a_13_n43# B3 AND_2/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1448 m1_846_729# AND_2/m1_33_33# AND_2/2INV_0/a_6_87# AND_2/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1449 m1_846_729# AND_2/m1_33_33# AND_2/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1450 AND_3/NAND_0/vdd A2 AND_3/m1_33_33# AND_3/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1451 AND_3/m1_33_33# B0 AND_3/NAND_0/vdd AND_3/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1452 AND_3/m1_33_33# A2 AND_3/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1453 AND_3/NAND_0/a_13_n43# B0 AND_3/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1454 m1_n381_n396# AND_3/m1_33_33# AND_3/2INV_0/a_6_87# AND_3/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1455 m1_n381_n396# AND_3/m1_33_33# AND_3/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1456 AND_4/NAND_0/vdd A1 AND_4/m1_33_33# AND_4/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1457 AND_4/m1_33_33# B2 AND_4/NAND_0/vdd AND_4/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1458 AND_4/m1_33_33# A1 AND_4/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1459 AND_4/NAND_0/a_13_n43# B2 AND_4/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1460 m1_373_730# AND_4/m1_33_33# AND_4/2INV_0/a_6_87# AND_4/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1461 m1_373_730# AND_4/m1_33_33# AND_4/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1462 AND_5/NAND_0/vdd A1 AND_5/m1_33_33# AND_5/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1463 AND_5/m1_33_33# B3 AND_5/NAND_0/vdd AND_5/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1464 AND_5/m1_33_33# A1 AND_5/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1465 AND_5/NAND_0/a_13_n43# B3 AND_5/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1466 m1_287_713# AND_5/m1_33_33# AND_5/2INV_0/a_6_87# AND_5/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1467 m1_287_713# AND_5/m1_33_33# AND_5/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1468 AND_10/NAND_0/vdd A2 AND_10/m1_33_33# AND_10/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1469 AND_10/m1_33_33# B2 AND_10/NAND_0/vdd AND_10/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1470 AND_10/m1_33_33# A2 AND_10/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1471 AND_10/NAND_0/a_13_n43# B2 AND_10/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1472 m1_n486_n376# AND_10/m1_33_33# AND_10/2INV_0/a_6_87# AND_10/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1473 m1_n486_n376# AND_10/m1_33_33# AND_10/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1474 AND_6/NAND_0/vdd A1 AND_6/m1_33_33# AND_6/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1475 AND_6/m1_33_33# B1 AND_6/NAND_0/vdd AND_6/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1476 AND_6/m1_33_33# A1 AND_6/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1477 AND_6/NAND_0/a_13_n43# B1 AND_6/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1478 m1_444_710# AND_6/m1_33_33# AND_6/2INV_0/a_6_87# AND_6/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1479 m1_444_710# AND_6/m1_33_33# AND_6/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1480 AND_11/NAND_0/vdd A3 AND_11/m1_33_33# AND_11/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1481 AND_11/m1_33_33# B3 AND_11/NAND_0/vdd AND_11/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1482 AND_11/m1_33_33# A3 AND_11/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1483 AND_11/NAND_0/a_13_n43# B3 AND_11/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1484 m1_n1431_n1486# AND_11/m1_33_33# AND_11/2INV_0/a_6_87# AND_11/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1485 m1_n1431_n1486# AND_11/m1_33_33# AND_11/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1486 AND_7/NAND_0/vdd A1 AND_7/m1_33_33# AND_7/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1487 AND_7/m1_33_33# B0 AND_7/NAND_0/vdd AND_7/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1488 AND_7/m1_33_33# A1 AND_7/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1489 AND_7/NAND_0/a_13_n43# B0 AND_7/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1490 m1_478_710# AND_7/m1_33_33# AND_7/2INV_0/a_6_87# AND_7/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1491 m1_478_710# AND_7/m1_33_33# AND_7/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1492 AND_12/NAND_0/vdd A3 AND_12/m1_33_33# AND_12/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1493 AND_12/m1_33_33# B2 AND_12/NAND_0/vdd AND_12/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1494 AND_12/m1_33_33# A3 AND_12/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1495 AND_12/NAND_0/a_13_n43# B2 AND_12/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1496 m1_n1345_n1469# AND_12/m1_33_33# AND_12/2INV_0/a_6_87# AND_12/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1497 m1_n1345_n1469# AND_12/m1_33_33# AND_12/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1498 AND_8/NAND_0/vdd A2 AND_8/m1_33_33# AND_8/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1499 AND_8/m1_33_33# B1 AND_8/NAND_0/vdd AND_8/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1500 AND_8/m1_33_33# A2 AND_8/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1501 AND_8/NAND_0/a_13_n43# B1 AND_8/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1502 m1_n415_n396# AND_8/m1_33_33# AND_8/2INV_0/a_6_87# AND_8/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1503 m1_n415_n396# AND_8/m1_33_33# AND_8/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1504 AND_13/NAND_0/vdd A3 AND_13/m1_33_33# AND_13/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1505 AND_13/m1_33_33# B1 AND_13/NAND_0/vdd AND_13/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1506 AND_13/m1_33_33# A3 AND_13/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1507 AND_13/NAND_0/a_13_n43# B1 AND_13/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1508 m1_n1274_n1489# AND_13/m1_33_33# AND_13/2INV_0/a_6_87# AND_13/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1509 m1_n1274_n1489# AND_13/m1_33_33# AND_13/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1510 AND_9/NAND_0/vdd A2 AND_9/m1_33_33# AND_9/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1511 AND_9/m1_33_33# B3 AND_9/NAND_0/vdd AND_9/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1512 AND_9/m1_33_33# A2 AND_9/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1513 AND_9/NAND_0/a_13_n43# B3 AND_9/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1514 m1_n572_n393# AND_9/m1_33_33# AND_9/2INV_0/a_6_87# AND_9/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1515 m1_n572_n393# AND_9/m1_33_33# AND_9/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1516 AND_14/NAND_0/vdd A3 AND_14/m1_33_33# AND_14/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1517 AND_14/m1_33_33# B0 AND_14/NAND_0/vdd AND_14/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1518 AND_14/m1_33_33# A3 AND_14/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1519 AND_14/NAND_0/a_13_n43# B0 AND_14/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1520 m1_n1240_n1489# AND_14/m1_33_33# AND_14/2INV_0/a_6_87# AND_14/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1521 m1_n1240_n1489# AND_14/m1_33_33# AND_14/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1522 AND_15/NAND_0/vdd A0 AND_15/m1_33_33# AND_15/NAND_0/w_0_0# pmos w=20 l=2
++  ad=200 pd=100 as=120 ps=52
+M1523 AND_15/m1_33_33# B0 AND_15/NAND_0/vdd AND_15/NAND_0/w_0_0# pmos w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1524 AND_15/m1_33_33# A0 AND_15/NAND_0/a_13_n43# Gnd nmos w=20 l=2
++  ad=140 pd=54 as=120 ps=52
+M1525 AND_15/NAND_0/a_13_n43# B0 AND_15/NAND_0/gnd Gnd nmos w=20 l=2
++  ad=0 pd=0 as=150 ps=80
+M1526 P0 AND_15/m1_33_33# AND_15/2INV_0/a_6_87# AND_15/2INV_0/w_0_81# pmos w=20 l=2
++  ad=100 pd=50 as=100 ps=50
+M1527 P0 AND_15/m1_33_33# AND_15/NAND_0/gnd Gnd nmos w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+C0 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd m1_444_710# 4.32fF
+C1 Adder_4_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C2 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/m1_717_336# 4.32fF
+C3 Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# 2.62fF
+C4 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C5 AND_0/NAND_0/w_0_0# A0 2.62fF
+C6 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# 6.39fF
+C7 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C8 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd 6.39fF
+C9 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C10 AND_8/NAND_0/w_0_0# AND_8/NAND_0/vdd 4.51fF
+C11 m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 2.62fF
+C12 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C13 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C14 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# 6.39fF
+C15 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/a_6_87# 3.76fF
+C16 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C17 AND_2/NAND_0/vdd AND_2/NAND_0/w_0_0# 4.51fF
+C18 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# m1_n1345_n1469# 2.62fF
+C19 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C20 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C21 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C22 Adder_4_1/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_2/OR_0/2INV_0/w_0_81# 6.39fF
+C23 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C24 Adder_4_2/Full_Adder_0/m1_550_446# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C25 AND_14/m1_33_33# AND_14/2INV_0/w_0_81# 2.62fF
+C26 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C27 AND_9/NAND_0/vdd AND_9/2INV_0/w_0_81# 6.39fF
+C28 AND_13/NAND_0/vdd AND_13/2INV_0/a_6_87# 3.76fF
+C29 Adder_4_1/Full_Adder_0/m1_772_434# Adder_4_1/Full_Adder_0/OR_0/NOR_0/w_0_n1# 2.62fF
+C30 Adder_4_2/m1_100_545# m1_n1274_n1489# 2.16fF
+C31 m1_n415_n396# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C32 m1_478_710# Adder_4_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# 2.62fF
+C33 Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C34 m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# 2.62fF
+C35 m1_n12_n395# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C36 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# Adder_4_2/m1_100_545# 2.62fF
+C37 Adder_4_1/Full_Adder_0/OR_0/m1_35_29# Adder_4_1/Full_Adder_0/OR_0/2INV_0/w_0_81# 2.62fF
+C38 Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 11.84fF
+C39 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C40 Adder_4_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_935_711# 2.62fF
+C41 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C42 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C43 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd 6.39fF
+C44 Adder_4_1/m1_717_336# Adder_4_1/Full_Adder_1/m1_550_446# 3.63fF
+C45 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_1/m1_340_335# 2.62fF
+C46 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/m1_717_336# 2.62fF
+C47 Adder_4_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# m1_n381_n396# 2.62fF
+C48 Adder_4_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# Adder_4_0/Half_Adder_0/XOR_0/vdd 6.39fF
+C49 Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C50 Adder_4_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C51 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C52 AND_13/NAND_0/w_0_0# AND_13/NAND_0/vdd 4.51fF
+C53 Adder_4_2/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_0/OR_0/NOR_0/w_0_n1# 3.95fF
+C54 Adder_4_1/Full_Adder_2/OR_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_2/OR_0/NOR_0/vdd 3.76fF
+C55 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_2/Full_Adder_1/m1_550_446# 2.62fF
+C56 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C57 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd m1_n1431_n1486# 4.32fF
+C58 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C59 Adder_4_1/m1_100_545# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 2.62fF
+C60 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_2/m1_340_335# 2.62fF
+C61 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd 6.39fF
+C62 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C63 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/a_6_87# 3.76fF
+C64 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# 2.62fF
+C65 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_444_710# 2.62fF
+C66 A0 AND_2/NAND_0/w_0_0# 2.62fF
+C67 AND_1/NAND_0/vdd AND_1/2INV_0/w_0_81# 6.39fF
+C68 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_2/Full_Adder_1/m1_550_446# 2.62fF
+C69 Adder_4_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_76_n395# 2.62fF
+C70 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/m1_100_545# 2.62fF
+C71 AND_0/NAND_0/w_0_0# AND_0/NAND_0/vdd 4.51fF
+C72 Adder_4_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C73 Adder_4_2/Full_Adder_1/m1_772_434# Adder_4_2/Full_Adder_1/OR_0/NOR_0/w_0_n1# 2.62fF
+C74 m1_444_710# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# 2.62fF
+C75 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# 2.62fF
+C76 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# 6.39fF
+C77 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C78 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/m1_340_335# 4.32fF
+C79 Adder_4_1/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n381_n396# 2.62fF
+C80 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C81 AND_15/m1_33_33# AND_15/2INV_0/w_0_81# 2.62fF
+C82 AND_14/NAND_0/vdd AND_14/2INV_0/w_0_81# 6.39fF
+C83 Adder_4_2/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_2/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C84 AND_9/NAND_0/vdd AND_9/2INV_0/a_6_87# 3.76fF
+C85 Adder_4_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C86 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# 6.39fF
+C87 AND_3/m1_33_33# AND_3/2INV_0/w_0_81# 2.62fF
+C88 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C89 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C90 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C91 Adder_4_0/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_2/OR_0/2INV_0/w_0_81# 6.39fF
+C92 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C93 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C94 Adder_4_0/m1_717_336# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# 2.62fF
+C95 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C96 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# 6.39fF
+C97 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/m1_n35_334# 4.32fF
+C98 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 4.51fF
+C99 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd 4.51fF
+C100 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# 6.39fF
+C101 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd 6.39fF
+C102 AND_9/NAND_0/w_0_0# AND_9/NAND_0/vdd 4.51fF
+C103 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C104 AND_5/NAND_0/w_0_0# B3 2.62fF
+C105 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C106 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_2/Full_Adder_0/m1_550_446# 11.84fF
+C107 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C108 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n1345_n1469# 2.62fF
+C109 Adder_4_1/Full_Adder_0/m1_550_446# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C110 Adder_4_2/Half_Adder_0/XOR_0/w_50_21# Adder_4_2/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C111 Adder_4_2/Full_Adder_0/m1_550_349# Adder_4_2/Full_Adder_0/OR_0/NOR_0/w_0_n1# 2.62fF
+C112 m1_478_710# Adder_4_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C113 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd 3.76fF
+C114 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# 2.62fF
+C115 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C116 Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 11.84fF
+C117 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C118 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd 6.39fF
+C119 m1_n1345_n1469# m1_n871_n1488# 2.88fF
+C120 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C121 AND_15/NAND_0/vdd AND_15/2INV_0/w_0_81# 6.39fF
+C122 AND_14/NAND_0/vdd AND_14/2INV_0/a_6_87# 3.76fF
+C123 m1_n1431_n1486# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C124 AND_4/m1_33_33# AND_4/2INV_0/w_0_81# 2.62fF
+C125 AND_4/NAND_0/w_0_0# A1 2.62fF
+C126 m1_444_710# gnd 2.88fF
+C127 Adder_4_0/Full_Adder_1/m1_550_349# Adder_4_0/Full_Adder_1/OR_0/NOR_0/w_0_n1# 2.62fF
+C128 AND_3/NAND_0/vdd AND_3/2INV_0/w_0_81# 6.39fF
+C129 AND_4/NAND_0/w_0_0# B2 2.62fF
+C130 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C131 m1_n783_n1488# Adder_4_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C132 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C133 Adder_4_2/Full_Adder_1/OR_0/m1_35_29# Adder_4_2/Full_Adder_1/OR_0/2INV_0/w_0_81# 2.62fF
+C134 Adder_4_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C135 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_1/Full_Adder_1/m1_550_446# 2.62fF
+C136 Adder_4_1/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_0/OR_0/NOR_0/w_0_n1# 3.95fF
+C137 Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_2/m1_550_446# 3.63fF
+C138 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_2/m1_717_336# 2.62fF
+C139 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd m1_n572_n393# 4.32fF
+C140 Adder_4_0/m1_100_545# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 2.62fF
+C141 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# P6 11.84fF
+C142 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C143 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_1/m1_340_335# 2.62fF
+C144 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/a_6_87# 3.76fF
+C145 AND_0/NAND_0/vdd AND_0/2INV_0/w_0_81# 6.39fF
+C146 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_1/Full_Adder_1/m1_550_446# 2.62fF
+C147 AND_2/NAND_0/w_0_0# B3 2.62fF
+C148 Adder_4_1/Full_Adder_1/m1_772_434# Adder_4_1/Full_Adder_1/OR_0/NOR_0/w_0_n1# 2.62fF
+C149 Adder_4_0/m1_340_335# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# 2.62fF
+C150 AND_14/NAND_0/w_0_0# AND_14/NAND_0/vdd 4.51fF
+C151 A1 AND_5/NAND_0/w_0_0# 2.62fF
+C152 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C153 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# 6.39fF
+C154 Adder_4_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Half_Adder_0/AND_0/2INV_0/w_0_81# 2.62fF
+C155 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C156 Adder_4_1/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_1/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C157 Adder_4_0/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_2/OR_0/NOR_0/w_0_n1# 3.95fF
+C158 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 4.51fF
+C159 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# Adder_4_0/m1_100_545# 2.62fF
+C160 Adder_4_0/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_1/OR_0/2INV_0/a_6_87# 3.76fF
+C161 Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# 2.62fF
+C162 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/a_6_87# 3.76fF
+C163 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C164 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd 6.39fF
+C165 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n806_n1488# 2.62fF
+C166 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# 6.39fF
+C167 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# 2.62fF
+C168 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# m1_10_n396# 11.84fF
+C169 Adder_4_0/Full_Adder_0/OR_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_0/OR_0/NOR_0/vdd 3.76fF
+C170 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd m1_287_713# 4.32fF
+C171 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C172 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C173 Adder_4_2/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_0/OR_0/2INV_0/w_0_81# 6.39fF
+C174 AND_15/NAND_0/vdd AND_15/2INV_0/a_6_87# 3.76fF
+C175 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/m1_n35_334# 4.32fF
+C176 Adder_4_1/Full_Adder_0/OR_0/NOR_0/w_0_n1# Adder_4_1/Full_Adder_0/m1_550_349# 2.62fF
+C177 AND_5/m1_33_33# AND_5/2INV_0/w_0_81# 2.62fF
+C178 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C179 AND_4/NAND_0/vdd AND_4/2INV_0/w_0_81# 6.39fF
+C180 AND_11/NAND_0/w_0_0# B3 2.62fF
+C181 AND_10/NAND_0/w_0_0# B2 2.62fF
+C182 AND_3/NAND_0/vdd AND_3/2INV_0/a_6_87# 3.76fF
+C183 Adder_4_2/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C184 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# 6.39fF
+C185 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C186 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C187 AND_0/NAND_0/w_0_0# B1 2.62fF
+C188 Adder_4_2/m1_100_545# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C189 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# Adder_4_1/m1_100_545# 2.62fF
+C190 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_1/Full_Adder_0/m1_550_446# 11.84fF
+C191 Adder_4_0/Full_Adder_1/OR_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_1/OR_0/NOR_0/vdd 6.39fF
+C192 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd m1_n486_n376# 4.32fF
+C193 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# 6.39fF
+C194 Adder_4_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_1/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C195 Adder_4_0/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_0/Half_Adder_0/AND_0/m1_33_33# 2.62fF
+C196 Adder_4_0/Full_Adder_0/OR_0/m1_35_29# Adder_4_0/Full_Adder_0/OR_0/2INV_0/w_0_81# 2.62fF
+C197 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# m1_n1274_n1489# 2.62fF
+C198 m1_53_n395# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 11.84fF
+C199 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C200 m1_912_711# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C201 Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C202 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_0/Full_Adder_1/m1_550_446# 2.62fF
+C203 AND_15/NAND_0/w_0_0# AND_15/NAND_0/vdd 4.51fF
+C204 A1 AND_6/NAND_0/w_0_0# 2.62fF
+C205 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C206 AND_3/NAND_0/w_0_0# B0 2.62fF
+C207 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C208 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd m1_n1345_n1469# 4.32fF
+C209 AND_3/NAND_0/w_0_0# AND_3/NAND_0/vdd 4.51fF
+C210 Adder_4_2/Full_Adder_1/m1_550_446# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C211 m1_478_710# gnd 2.88fF
+C212 Adder_4_2/Full_Adder_0/OR_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_0/OR_0/NOR_0/vdd 3.76fF
+C213 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C214 m1_n1274_n1489# m1_n871_n1488# 2.88fF
+C215 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# m1_n783_n1488# 11.84fF
+C216 m1_n572_n393# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C217 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd 4.51fF
+C218 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C219 Adder_4_0/m1_717_336# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# 2.62fF
+C220 m1_76_n395# Adder_4_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C221 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_0/m1_717_336# 4.32fF
+C222 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_n806_n1488# 2.62fF
+C223 Adder_4_1/Full_Adder_1/OR_0/m1_35_29# Adder_4_1/Full_Adder_1/OR_0/2INV_0/w_0_81# 2.62fF
+C224 m1_n486_n376# m1_n12_n395# 2.88fF
+C225 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C226 Adder_4_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C227 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/a_6_87# 3.76fF
+C228 Adder_4_1/m1_n35_334# Adder_4_1/Full_Adder_2/m1_550_446# 3.63fF
+C229 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_1/m1_717_336# 2.62fF
+C230 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C231 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# m1_n849_n1489# 11.84fF
+C232 m1_76_n395# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 11.84fF
+C233 AND_10/m1_33_33# AND_10/2INV_0/w_0_81# 2.62fF
+C234 AND_5/NAND_0/vdd AND_5/2INV_0/w_0_81# 6.39fF
+C235 AND_4/NAND_0/vdd AND_4/2INV_0/a_6_87# 3.76fF
+C236 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C237 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n871_n1488# 2.62fF
+C238 m1_444_710# Adder_4_0/m1_100_545# 2.16fF
+C239 Adder_4_2/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_1/OR_0/NOR_0/w_0_n1# 3.95fF
+C240 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_2/Full_Adder_2/m1_550_446# 2.62fF
+C241 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd 4.51fF
+C242 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C243 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C244 Adder_4_2/Half_Adder_0/XOR_0/vdd m1_n1240_n1489# 4.32fF
+C245 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C246 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/a_6_87# 3.76fF
+C247 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_2/m1_717_336# 2.62fF
+C248 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd 3.76fF
+C249 Adder_4_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 2.62fF
+C250 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_2/Full_Adder_2/m1_550_446# 2.62fF
+C251 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 4.51fF
+C252 Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# 2.62fF
+C253 Adder_4_2/Full_Adder_2/m1_772_434# Adder_4_2/Full_Adder_2/OR_0/NOR_0/w_0_n1# 2.62fF
+C254 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/a_6_87# 3.76fF
+C255 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C256 gnd m1_373_730# 2.88fF
+C257 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd 3.76fF
+C258 A1 AND_7/NAND_0/w_0_0# 2.62fF
+C259 m1_287_713# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C260 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# 6.39fF
+C261 AND_6/NAND_0/w_0_0# B1 2.62fF
+C262 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# 6.39fF
+C263 AND_4/NAND_0/w_0_0# AND_4/NAND_0/vdd 4.51fF
+C264 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C265 AND_2/2INV_0/w_0_81# AND_2/m1_33_33# 2.62fF
+C266 AND_1/NAND_0/w_0_0# A0 2.62fF
+C267 Adder_4_1/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_0/OR_0/2INV_0/w_0_81# 6.39fF
+C268 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C269 Adder_4_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C270 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C271 A0 AND_15/NAND_0/w_0_0# 2.62fF
+C272 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd 6.39fF
+C273 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# 6.39fF
+C274 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd 6.39fF
+C275 AND_6/m1_33_33# AND_6/2INV_0/w_0_81# 2.62fF
+C276 AND_10/NAND_0/vdd AND_10/2INV_0/w_0_81# 6.39fF
+C277 AND_12/NAND_0/w_0_0# B2 2.62fF
+C278 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# m1_n415_n396# 2.62fF
+C279 AND_5/NAND_0/vdd AND_5/2INV_0/a_6_87# 3.76fF
+C280 Adder_4_0/Full_Adder_0/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_0/OR_0/NOR_0/w_0_n1# 3.95fF
+C281 Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C282 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C283 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_2/Full_Adder_1/m1_550_446# 11.84fF
+C284 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C285 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_287_713# 2.62fF
+C286 Adder_4_1/Full_Adder_1/m1_550_446# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C287 Adder_4_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 4.51fF
+C288 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# 2.62fF
+C289 Adder_4_1/Full_Adder_0/OR_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_0/OR_0/NOR_0/vdd 3.76fF
+C290 Adder_4_2/Full_Adder_1/m1_550_349# Adder_4_2/Full_Adder_1/OR_0/NOR_0/w_0_n1# 2.62fF
+C291 m1_935_711# Adder_4_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 2.62fF
+C292 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C293 m1_n415_n396# m1_n12_n395# 2.88fF
+C294 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd 4.51fF
+C295 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_53_n395# 2.62fF
+C296 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C297 A3 AND_11/NAND_0/w_0_0# 2.62fF
+C298 AND_3/NAND_0/w_0_0# A2 2.62fF
+C299 B3 AND_9/NAND_0/w_0_0# 2.62fF
+C300 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C301 AND_5/NAND_0/w_0_0# AND_5/NAND_0/vdd 4.51fF
+C302 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C303 m1_n1240_n1489# Adder_4_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C304 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_0/m1_340_335# 4.32fF
+C305 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C306 Adder_4_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C307 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n12_n395# 2.62fF
+C308 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C309 m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# 2.62fF
+C310 Adder_4_2/Full_Adder_2/OR_0/m1_35_29# Adder_4_2/Full_Adder_2/OR_0/2INV_0/w_0_81# 2.62fF
+C311 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_912_711# 2.62fF
+C312 Adder_4_1/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_1/OR_0/NOR_0/w_0_n1# 3.95fF
+C313 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_1/Full_Adder_2/m1_550_446# 2.62fF
+C314 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C315 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_2/m1_n35_334# 2.62fF
+C316 Adder_4_1/Half_Adder_0/XOR_0/vdd m1_n381_n396# 4.32fF
+C317 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 4.51fF
+C318 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C319 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_1/m1_717_336# 2.62fF
+C320 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/a_6_87# 3.76fF
+C321 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C322 AND_11/m1_33_33# AND_11/2INV_0/w_0_81# 2.62fF
+C323 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_1/Full_Adder_2/m1_550_446# 2.62fF
+C324 AND_6/NAND_0/vdd AND_6/2INV_0/w_0_81# 6.39fF
+C325 AND_10/NAND_0/vdd AND_10/2INV_0/a_6_87# 3.76fF
+C326 AND_2/2INV_0/w_0_81# AND_2/NAND_0/vdd 6.39fF
+C327 Adder_4_1/Full_Adder_2/m1_772_434# Adder_4_1/Full_Adder_2/OR_0/NOR_0/w_0_n1# 2.62fF
+C328 Adder_4_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Half_Adder_0/XOR_0/a_51_n59# 2.62fF
+C329 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 4.51fF
+C330 Adder_4_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C331 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/w_0_81# 6.39fF
+C332 AND_1/NAND_0/vdd AND_1/2INV_0/a_6_87# 3.76fF
+C333 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C334 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# 2.62fF
+C335 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 4.51fF
+C336 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_53_n395# 2.62fF
+C337 Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 11.84fF
+C338 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n1274_n1489# 2.62fF
+C339 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/a_6_87# 3.76fF
+C340 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C341 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C342 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/m1_n35_334# 2.62fF
+C343 Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# 2.62fF
+C344 AND_1/m1_33_33# AND_1/2INV_0/w_0_81# 2.62fF
+C345 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C346 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C347 A3 AND_12/NAND_0/w_0_0# 2.62fF
+C348 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C349 Adder_4_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C350 AND_8/NAND_0/w_0_0# B1 2.62fF
+C351 AND_7/NAND_0/w_0_0# B0 2.62fF
+C352 AND_10/NAND_0/w_0_0# AND_10/NAND_0/vdd 4.51fF
+C353 Adder_4_2/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_1/OR_0/2INV_0/w_0_81# 6.39fF
+C354 Adder_4_0/Full_Adder_0/OR_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_0/OR_0/NOR_0/vdd 6.39fF
+C355 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_0/m1_340_335# 2.62fF
+C356 m1_n1345_n1469# Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C357 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C358 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# 2.62fF
+C359 m1_n806_n1488# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C360 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/a_6_87# 3.76fF
+C361 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/a_6_87# 3.76fF
+C362 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_1/Full_Adder_1/m1_550_446# 11.84fF
+C363 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C364 Adder_4_1/Full_Adder_1/m1_550_349# Adder_4_1/Full_Adder_1/OR_0/NOR_0/w_0_n1# 2.62fF
+C365 Adder_4_2/m1_340_335# Adder_4_2/Full_Adder_0/m1_550_446# 3.63fF
+C366 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd 4.51fF
+C367 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# 6.39fF
+C368 AND_7/m1_33_33# AND_7/2INV_0/w_0_81# 2.62fF
+C369 AND_10/NAND_0/w_0_0# A2 2.62fF
+C370 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# m1_n1431_n1486# 2.62fF
+C371 AND_11/NAND_0/vdd AND_11/2INV_0/w_0_81# 6.39fF
+C372 AND_13/NAND_0/w_0_0# B1 2.62fF
+C373 AND_6/NAND_0/vdd AND_6/2INV_0/a_6_87# 3.76fF
+C374 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# P5 11.84fF
+C375 Adder_4_2/m1_717_336# Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C376 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# 2.62fF
+C377 Adder_4_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C378 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/m1_340_335# 2.62fF
+C379 Adder_4_2/Full_Adder_2/m1_550_446# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C380 Adder_4_2/Full_Adder_1/OR_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_1/OR_0/NOR_0/vdd 3.76fF
+C381 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C382 m1_n871_n1488# m1_n1240_n1489# 2.88fF
+C383 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd 3.76fF
+C384 m1_n381_n396# Adder_4_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C385 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C386 AND_1/NAND_0/w_0_0# B2 2.62fF
+C387 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C388 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/2INV_1/a_6_87# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd 3.76fF
+C389 m1_912_711# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# 2.62fF
+C390 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 2.62fF
+C391 Adder_4_0/Full_Adder_1/OR_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_1/OR_0/m1_35_29# 2.62fF
+C392 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_n871_n1488# 2.62fF
+C393 Adder_4_1/Full_Adder_2/OR_0/m1_35_29# Adder_4_1/Full_Adder_2/OR_0/2INV_0/w_0_81# 2.62fF
+C394 Adder_4_0/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_2/OR_0/2INV_0/a_6_87# 3.76fF
+C395 A3 AND_13/NAND_0/w_0_0# 2.62fF
+C396 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C397 AND_6/NAND_0/w_0_0# AND_6/NAND_0/vdd 4.51fF
+C398 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_1/m1_n35_334# 2.62fF
+C399 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# 2.62fF
+C400 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n1431_n1486# 2.62fF
+C401 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# 6.39fF
+C402 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C403 Adder_4_2/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n783_n1488# 2.62fF
+C404 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd 6.39fF
+C405 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C406 Adder_4_2/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_2/OR_0/NOR_0/w_0_n1# 3.95fF
+C407 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C408 Adder_4_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C409 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C410 Adder_4_0/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_0/Half_Adder_0/AND_0/NAND_0/vdd 6.39fF
+C411 AND_0/NAND_0/vdd AND_0/2INV_0/a_6_87# 3.76fF
+C412 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_2/m1_n35_334# 2.62fF
+C413 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C414 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd 6.39fF
+C415 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 4.51fF
+C416 AND_12/m1_33_33# AND_12/2INV_0/w_0_81# 2.62fF
+C417 Adder_4_0/Half_Adder_0/XOR_0/w_50_21# P1 11.84fF
+C418 m1_935_711# Adder_4_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C419 AND_7/NAND_0/vdd AND_7/2INV_0/w_0_81# 6.39fF
+C420 AND_11/NAND_0/vdd AND_11/2INV_0/a_6_87# 3.76fF
+C421 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/a_6_87# 3.76fF
+C422 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C423 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C424 AND_0/m1_33_33# AND_0/2INV_0/w_0_81# 2.62fF
+C425 Adder_4_0/Half_Adder_0/AND_0/2INV_0/a_6_87# Adder_4_0/Half_Adder_0/AND_0/NAND_0/vdd 3.76fF
+C426 Adder_4_0/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Half_Adder_0/XOR_0/vdd 4.51fF
+C427 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C428 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C429 Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C430 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C431 Adder_4_1/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_1/OR_0/2INV_0/w_0_81# 6.39fF
+C432 m1_287_713# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# 2.62fF
+C433 gnd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C434 m1_478_710# m1_935_711# 4.75fF
+C435 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_56_27# 5.08fF
+C436 A3 AND_14/NAND_0/w_0_0# 2.62fF
+C437 m1_53_n395# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C438 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd 6.39fF
+C439 AND_11/NAND_0/w_0_0# AND_11/NAND_0/vdd 4.51fF
+C440 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C441 m1_478_710# Adder_4_0/Half_Adder_0/XOR_0/vdd 4.32fF
+C442 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C443 Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/m1_550_446# 3.63fF
+C444 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# m1_n572_n393# 2.62fF
+C445 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_0/Full_Adder_0/m1_550_446# 2.62fF
+C446 m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C447 Adder_4_1/m1_717_336# Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C448 AND_2/NAND_0/vdd AND_2/2INV_0/a_6_87# 3.76fF
+C449 m1_444_710# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C450 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# Adder_4_2/Full_Adder_2/m1_550_446# 11.84fF
+C451 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C452 Adder_4_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Half_Adder_0/XOR_0/2INV_1/a_6_87# 3.76fF
+C453 Adder_4_1/Full_Adder_2/m1_550_446# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C454 Adder_4_1/m1_100_545# m1_n415_n396# 2.16fF
+C455 Adder_4_1/Full_Adder_1/OR_0/2INV_0/a_6_87# Adder_4_1/Full_Adder_1/OR_0/NOR_0/vdd 3.76fF
+C456 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_2/Full_Adder_0/m1_550_446# 2.62fF
+C457 Adder_4_2/Full_Adder_2/m1_550_349# Adder_4_2/Full_Adder_2/OR_0/NOR_0/w_0_n1# 2.62fF
+C458 m1_n12_n395# m1_n381_n396# 2.88fF
+C459 Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/m1_717_336# 3.63fF
+C460 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd m1_n1274_n1489# 4.32fF
+C461 AND_8/m1_33_33# AND_8/2INV_0/w_0_81# 2.62fF
+C462 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C463 AND_12/NAND_0/vdd AND_12/2INV_0/w_0_81# 6.39fF
+C464 AND_14/NAND_0/w_0_0# B0 2.62fF
+C465 AND_7/NAND_0/vdd AND_7/2INV_0/a_6_87# 3.76fF
+C466 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 2.62fF
+C467 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# gnd 2.62fF
+C468 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_n12_n395# 2.62fF
+C469 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_0/m1_550_446# 2.62fF
+C470 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_2/Full_Adder_0/m1_550_446# 2.62fF
+C471 m1_n1240_n1489# m1_n783_n1488# 4.75fF
+C472 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C473 Adder_4_2/Half_Adder_0/XOR_0/w_50_21# P3 11.84fF
+C474 Adder_4_2/Full_Adder_0/m1_772_434# Adder_4_2/Full_Adder_0/OR_0/NOR_0/w_0_n1# 2.62fF
+C475 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C476 Adder_4_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C477 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# 6.39fF
+C478 Adder_4_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C479 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n572_n393# 2.62fF
+C480 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# 2.62fF
+C481 m1_n486_n376# Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 2.62fF
+C482 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C483 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C484 Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C485 Adder_4_0/Full_Adder_0/m1_550_446# Adder_4_0/m1_340_335# 3.63fF
+C486 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C487 Adder_4_1/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_76_n395# 2.62fF
+C488 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/a_6_87# Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd 3.76fF
+C489 Adder_4_0/Half_Adder_0/XOR_0/2INV_1/a_6_87# Adder_4_0/Half_Adder_0/XOR_0/vdd 3.76fF
+C490 Adder_4_1/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_1/Full_Adder_2/OR_0/NOR_0/w_0_n1# 3.95fF
+C491 AND_8/NAND_0/w_0_0# A2 2.62fF
+C492 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C493 B0 AND_15/NAND_0/w_0_0# 2.62fF
+C494 AND_7/NAND_0/w_0_0# AND_7/NAND_0/vdd 4.51fF
+C495 Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# 2.62fF
+C496 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_1/m1_n35_334# 2.62fF
+C497 Adder_4_0/Full_Adder_1/OR_0/NOR_0/vdd Adder_4_0/Full_Adder_1/OR_0/NOR_0/w_0_n1# 3.95fF
+C498 Adder_4_0/Full_Adder_0/m1_550_349# Adder_4_0/Full_Adder_0/OR_0/NOR_0/w_0_n1# 2.62fF
+C499 Adder_4_0/m1_n35_334# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd 4.32fF
+C500 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/m1_717_336# 4.32fF
+C501 Adder_4_0/Full_Adder_1/m1_772_434# Adder_4_0/Full_Adder_1/OR_0/NOR_0/w_0_n1# 2.62fF
+C502 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/2INV_0/w_0_81# 6.39fF
+C503 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# 2.62fF
+C504 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C505 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n415_n396# 2.62fF
+C506 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# 4.51fF
+C507 AND_13/m1_33_33# AND_13/2INV_0/w_0_81# 2.62fF
+C508 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C509 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# 2.62fF
+C510 AND_8/NAND_0/vdd AND_8/2INV_0/w_0_81# 6.39fF
+C511 AND_12/NAND_0/vdd AND_12/2INV_0/a_6_87# 3.76fF
+C512 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/a_6_87# 3.76fF
+C513 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_56_27# 5.08fF
+C514 m1_373_730# Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C515 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/2INV_0/a_6_87# 3.76fF
+C516 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_2/m1_100_545# 2.62fF
+C517 Adder_4_0/Full_Adder_2/OR_0/m1_35_29# Adder_4_0/Full_Adder_2/OR_0/2INV_0/w_0_81# 2.62fF
+C518 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# m1_n806_n1488# 11.84fF
+C519 Adder_4_2/Full_Adder_2/OR_0/NOR_0/vdd Adder_4_2/Full_Adder_2/OR_0/2INV_0/w_0_81# 6.39fF
+C520 Adder_4_0/Full_Adder_1/m1_550_446# Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/w_0_0# 2.62fF
+C521 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# 2.62fF
+C522 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd 6.39fF
+C523 m1_n1274_n1489# Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C524 m1_n871_n1488# Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C525 A2 AND_9/NAND_0/w_0_0# 2.62fF
+C526 Adder_4_2/Full_Adder_0/OR_0/m1_35_29# Adder_4_2/Full_Adder_0/OR_0/2INV_0/w_0_81# 2.62fF
+C527 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/2INV_0/a_6_87# 3.76fF
+C528 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# Adder_4_1/Full_Adder_2/m1_550_446# 11.84fF
+C529 Adder_4_0/Full_Adder_0/m1_772_434# Adder_4_0/Full_Adder_0/OR_0/NOR_0/w_0_n1# 2.62fF
+C530 AND_12/NAND_0/w_0_0# AND_12/NAND_0/vdd 4.51fF
+C531 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C532 Adder_4_1/Full_Adder_2/m1_550_349# Adder_4_1/Full_Adder_2/OR_0/NOR_0/w_0_n1# 2.62fF
+C533 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_1/w_0_81# Adder_4_1/Full_Adder_0/m1_550_446# 2.62fF
+C534 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# gnd 2.62fF
+C535 Adder_4_2/m1_717_336# Adder_4_2/Full_Adder_1/m1_550_446# 3.63fF
+C536 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_2/m1_340_335# 2.62fF
+C537 Adder_4_2/Half_Adder_0/XOR_0/2INV_0/w_0_81# m1_n1240_n1489# 2.62fF
+C538 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd m1_n415_n396# 4.32fF
+C539 Adder_4_0/Full_Adder_2/m1_550_349# Adder_4_0/Full_Adder_2/OR_0/NOR_0/w_0_n1# 2.62fF
+C540 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/w_50_21# P4 11.84fF
+C541 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C542 Adder_4_1/m1_340_335# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd 4.32fF
+C543 Adder_4_2/m1_n35_334# Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# 2.62fF
+C544 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/w_0_0# Adder_4_1/Full_Adder_0/m1_550_446# 2.62fF
+C545 m1_n381_n396# m1_76_n395# 4.75fF
+C546 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/2INV_0/w_0_81# Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd 6.39fF
+C547 Adder_4_1/Half_Adder_0/XOR_0/w_50_21# P2 11.84fF
+C548 Adder_4_2/Full_Adder_2/OR_0/2INV_0/a_6_87# Adder_4_2/Full_Adder_2/OR_0/NOR_0/vdd 3.76fF
+C549 Adder_4_1/Half_Adder_0/XOR_0/vdd Adder_4_1/Half_Adder_0/XOR_0/w_50_21# 4.51fF
+C550 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/2INV_1/w_0_81# 6.39fF
+C551 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/2INV_0/w_0_81# 6.39fF
+C552 m1_478_710# Adder_4_0/Half_Adder_0/AND_0/NAND_0/w_0_0# 2.62fF
+C553 Adder_4_0/Full_Adder_2/m1_550_446# Adder_4_0/m1_n35_334# 3.63fF
+C554 Adder_4_0/Full_Adder_2/m1_772_434# Adder_4_0/Full_Adder_2/OR_0/NOR_0/w_0_n1# 2.62fF
+C555 AND_9/m1_33_33# AND_9/2INV_0/w_0_81# 2.62fF
+C556 Adder_4_1/Half_Adder_0/AND_0/NAND_0/vdd Adder_4_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 6.39fF
+C557 AND_13/NAND_0/vdd AND_13/2INV_0/w_0_81# 6.39fF
+C558 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/2INV_0/w_0_81# 2.62fF
+C559 AND_8/NAND_0/vdd AND_8/2INV_0/a_6_87# 3.76fF
+C560 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C561 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C562 Adder_4_2/Half_Adder_0/XOR_0/2INV_1/w_0_81# m1_n783_n1488# 2.62fF
+C563 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_1/w_0_81# Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd 6.39fF
+C564 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/2INV_0/w_0_81# 2.62fF
+C565 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd m1_373_730# 4.32fF
+C566 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/w_50_21# Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# 2.62fF
+C567 AND_1/NAND_0/w_0_0# AND_1/NAND_0/vdd 4.51fF
+C568 Adder_4_2/Half_Adder_0/XOR_0/a_51_n59# Adder_4_2/Half_Adder_0/XOR_0/w_50_21# 2.62fF
+C569 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/w_0_0# Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd 4.51fF
+C570 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/w_50_21# Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# 2.62fF
+C571 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/2INV_0/w_0_81# 6.39fF
+C572 Adder_4_2/Half_Adder_0/AND_0/NAND_0/w_0_0# m1_n1240_n1489# 2.62fF
+C573 P0 Gnd 595.58fF
+C574 AND_15/NAND_0/gnd Gnd 10.53fF
+C575 AND_15/m1_33_33# Gnd 9.89fF
+C576 AND_15/NAND_0/vdd Gnd 4.65fF
+C577 AND_14/NAND_0/gnd Gnd 10.53fF
+C578 AND_14/m1_33_33# Gnd 9.89fF
+C579 AND_14/NAND_0/vdd Gnd 4.65fF
+C580 B0 Gnd 70.18fF
+C581 AND_9/NAND_0/gnd Gnd 10.53fF
+C582 AND_9/m1_33_33# Gnd 9.89fF
+C583 AND_9/NAND_0/vdd Gnd 4.65fF
+C584 A2 Gnd 152.15fF
+C585 AND_13/NAND_0/gnd Gnd 10.53fF
+C586 AND_13/m1_33_33# Gnd 9.89fF
+C587 AND_13/NAND_0/vdd Gnd 4.65fF
+C588 B1 Gnd 71.31fF
+C589 AND_8/NAND_0/gnd Gnd 10.53fF
+C590 AND_8/m1_33_33# Gnd 9.89fF
+C591 AND_8/NAND_0/vdd Gnd 4.65fF
+C592 AND_12/NAND_0/gnd Gnd 10.53fF
+C593 AND_12/m1_33_33# Gnd 9.89fF
+C594 AND_12/NAND_0/vdd Gnd 4.65fF
+C595 B2 Gnd 70.37fF
+C596 AND_7/NAND_0/gnd Gnd 10.53fF
+C597 AND_7/m1_33_33# Gnd 9.89fF
+C598 AND_7/NAND_0/vdd Gnd 4.65fF
+C599 AND_11/NAND_0/gnd Gnd 10.53fF
+C600 AND_11/m1_33_33# Gnd 9.89fF
+C601 AND_11/NAND_0/vdd Gnd 4.65fF
+C602 A3 Gnd 152.15fF
+C603 B3 Gnd 71.03fF
+C604 AND_6/NAND_0/gnd Gnd 10.53fF
+C605 AND_6/m1_33_33# Gnd 9.89fF
+C606 AND_6/NAND_0/vdd Gnd 4.65fF
+C607 AND_10/NAND_0/gnd Gnd 10.53fF
+C608 AND_10/m1_33_33# Gnd 9.89fF
+C609 AND_10/NAND_0/vdd Gnd 4.65fF
+C610 AND_5/NAND_0/gnd Gnd 10.53fF
+C611 AND_5/m1_33_33# Gnd 9.89fF
+C612 AND_5/NAND_0/vdd Gnd 4.65fF
+C613 A1 Gnd 152.15fF
+C614 AND_4/NAND_0/gnd Gnd 10.53fF
+C615 AND_4/m1_33_33# Gnd 9.89fF
+C616 AND_4/NAND_0/vdd Gnd 4.65fF
+C617 AND_3/NAND_0/gnd Gnd 10.53fF
+C618 AND_3/m1_33_33# Gnd 9.89fF
+C619 AND_3/NAND_0/vdd Gnd 4.65fF
+C620 AND_2/NAND_0/gnd Gnd 10.53fF
+C621 AND_2/m1_33_33# Gnd 9.89fF
+C622 AND_2/NAND_0/vdd Gnd 4.65fF
+C623 A0 Gnd 224.16fF
+C624 AND_1/NAND_0/gnd Gnd 10.53fF
+C625 AND_1/m1_33_33# Gnd 9.89fF
+C626 AND_1/NAND_0/vdd Gnd 4.65fF
+C627 Adder_4_2/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C628 P3 Gnd 60.87fF
+C629 Adder_4_2/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C630 m1_n783_n1488# Gnd 351.65fF
+C631 Adder_4_2/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C632 Adder_4_2/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C633 m1_n1240_n1489# Gnd 289.18fF
+C634 Adder_4_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C635 Adder_4_2/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C636 Adder_4_2/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C637 Adder_4_2/Full_Adder_2/OR_0/NOR_0/vdd Gnd 6.11fF
+C638 Adder_4_2/Full_Adder_2/OR_0/NOR_0/gnd Gnd 9.59fF
+C639 P7 Gnd 100.63fF
+C640 Adder_4_2/Full_Adder_2/OR_0/m1_35_29# Gnd 12.43fF
+C641 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C642 P6 Gnd 61.05fF
+C643 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C644 Adder_4_2/Full_Adder_2/m1_550_446# Gnd 112.05fF
+C645 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C646 Adder_4_2/Full_Adder_2/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C647 Adder_4_2/m1_n35_334# Gnd 166.53fF
+C648 Adder_4_2/Full_Adder_2/m1_772_434# Gnd 12.99fF
+C649 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C650 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C651 Adder_4_2/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C652 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C653 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C654 m1_n871_n1488# Gnd 125.35fF
+C655 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C656 Adder_4_2/Full_Adder_2/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C657 m1_n1431_n1486# Gnd 161.09fF
+C658 Adder_4_2/Full_Adder_2/m1_550_349# Gnd 11.86fF
+C659 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C660 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C661 Adder_4_2/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C662 Adder_4_2/Full_Adder_1/OR_0/NOR_0/vdd Gnd 6.11fF
+C663 Adder_4_2/Full_Adder_1/OR_0/NOR_0/gnd Gnd 9.59fF
+C664 Adder_4_2/Full_Adder_1/OR_0/m1_35_29# Gnd 12.43fF
+C665 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C666 P4 Gnd 61.24fF
+C667 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C668 Adder_4_2/Full_Adder_1/m1_550_446# Gnd 112.05fF
+C669 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C670 Adder_4_2/Full_Adder_1/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C671 Adder_4_2/Full_Adder_1/m1_772_434# Gnd 12.99fF
+C672 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C673 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C674 Adder_4_2/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C675 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C676 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C677 m1_n806_n1488# Gnd 126.71fF
+C678 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C679 Adder_4_2/Full_Adder_1/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C680 m1_n1274_n1489# Gnd 300.50fF
+C681 Adder_4_2/Full_Adder_1/m1_550_349# Gnd 11.86fF
+C682 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C683 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C684 Adder_4_2/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C685 Adder_4_2/Full_Adder_0/OR_0/NOR_0/vdd Gnd 6.11fF
+C686 Adder_4_2/Full_Adder_0/OR_0/NOR_0/gnd Gnd 9.59fF
+C687 Adder_4_2/Full_Adder_0/OR_0/m1_35_29# Gnd 12.43fF
+C688 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C689 P5 Gnd 61.24fF
+C690 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C691 Adder_4_2/Full_Adder_0/m1_550_446# Gnd 112.05fF
+C692 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C693 Adder_4_2/Full_Adder_0/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C694 Adder_4_2/m1_340_335# Gnd 166.53fF
+C695 Adder_4_2/Full_Adder_0/m1_772_434# Gnd 12.99fF
+C696 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C697 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C698 Adder_4_2/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C699 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C700 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C701 Adder_4_2/m1_100_545# Gnd 94.47fF
+C702 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C703 Adder_4_2/Full_Adder_0/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C704 m1_n1345_n1469# Gnd 189.81fF
+C705 Adder_4_2/Full_Adder_0/m1_550_349# Gnd 11.86fF
+C706 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C707 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C708 Adder_4_2/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C709 AND_0/NAND_0/gnd Gnd 10.53fF
+C710 AND_0/m1_33_33# Gnd 9.89fF
+C711 AND_0/NAND_0/vdd Gnd 4.65fF
+C712 Adder_4_1/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C713 P2 Gnd 266.96fF
+C714 Adder_4_1/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C715 m1_76_n395# Gnd 351.42fF
+C716 Adder_4_1/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C717 Adder_4_1/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C718 m1_n381_n396# Gnd 289.18fF
+C719 Adder_4_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C720 Adder_4_1/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C721 Adder_4_1/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C722 Adder_4_1/Full_Adder_2/OR_0/NOR_0/vdd Gnd 6.11fF
+C723 Adder_4_1/Full_Adder_2/OR_0/NOR_0/gnd Gnd 9.59fF
+C724 Adder_4_1/Full_Adder_2/OR_0/m1_35_29# Gnd 12.43fF
+C725 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C726 m1_n849_n1489# Gnd 118.58fF
+C727 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C728 Adder_4_1/Full_Adder_2/m1_550_446# Gnd 112.05fF
+C729 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C730 Adder_4_1/Full_Adder_2/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C731 Adder_4_1/m1_n35_334# Gnd 166.53fF
+C732 Adder_4_1/Full_Adder_2/m1_772_434# Gnd 12.99fF
+C733 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C734 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C735 Adder_4_1/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C736 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C737 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C738 m1_n12_n395# Gnd 125.35fF
+C739 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C740 Adder_4_1/Full_Adder_2/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C741 m1_n572_n393# Gnd 161.09fF
+C742 Adder_4_1/Full_Adder_2/m1_550_349# Gnd 11.86fF
+C743 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C744 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C745 Adder_4_1/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C746 Adder_4_1/Full_Adder_1/OR_0/NOR_0/vdd Gnd 6.11fF
+C747 Adder_4_1/Full_Adder_1/OR_0/NOR_0/gnd Gnd 9.59fF
+C748 Adder_4_1/Full_Adder_1/OR_0/m1_35_29# Gnd 12.43fF
+C749 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C750 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C751 Adder_4_1/Full_Adder_1/m1_550_446# Gnd 112.05fF
+C752 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C753 Adder_4_1/Full_Adder_1/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C754 Adder_4_1/Full_Adder_1/m1_772_434# Gnd 12.99fF
+C755 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C756 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C757 Adder_4_1/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C758 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C759 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C760 m1_53_n395# Gnd 127.18fF
+C761 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C762 Adder_4_1/Full_Adder_1/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C763 m1_n415_n396# Gnd 300.50fF
+C764 Adder_4_1/Full_Adder_1/m1_550_349# Gnd 11.86fF
+C765 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C766 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C767 Adder_4_1/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C768 Adder_4_1/Full_Adder_0/OR_0/NOR_0/vdd Gnd 6.11fF
+C769 Adder_4_1/Full_Adder_0/OR_0/NOR_0/gnd Gnd 9.59fF
+C770 Adder_4_1/Full_Adder_0/OR_0/m1_35_29# Gnd 12.43fF
+C771 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C772 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C773 Adder_4_1/Full_Adder_0/m1_550_446# Gnd 112.05fF
+C774 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C775 Adder_4_1/Full_Adder_0/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C776 Adder_4_1/m1_340_335# Gnd 166.53fF
+C777 Adder_4_1/Full_Adder_0/m1_772_434# Gnd 12.99fF
+C778 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C779 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C780 Adder_4_1/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C781 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C782 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C783 Adder_4_1/m1_100_545# Gnd 94.47fF
+C784 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C785 Adder_4_1/Full_Adder_0/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C786 m1_n486_n376# Gnd 189.81fF
+C787 Adder_4_1/Full_Adder_0/m1_550_349# Gnd 11.86fF
+C788 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C789 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C790 Adder_4_1/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C791 m1_846_729# Gnd 116.65fF
+C792 Adder_4_0/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C793 P1 Gnd 476.16fF
+C794 Adder_4_0/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C795 m1_935_711# Gnd 326.88fF
+C796 Adder_4_0/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C797 Adder_4_0/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C798 m1_478_710# Gnd 288.48fF
+C799 Adder_4_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C800 Adder_4_0/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C801 Adder_4_0/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C802 Adder_4_0/Full_Adder_2/OR_0/NOR_0/vdd Gnd 6.11fF
+C803 Adder_4_0/Full_Adder_2/OR_0/NOR_0/gnd Gnd 9.59fF
+C804 Adder_4_0/Full_Adder_2/OR_0/m1_35_29# Gnd 12.43fF
+C805 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C806 m1_10_n396# Gnd 118.58fF
+C807 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C808 Adder_4_0/Full_Adder_2/m1_550_446# Gnd 112.05fF
+C809 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C810 Adder_4_0/Full_Adder_2/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C811 Adder_4_0/m1_n35_334# Gnd 166.53fF
+C812 Adder_4_0/Full_Adder_2/m1_772_434# Gnd 12.99fF
+C813 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C814 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C815 Adder_4_0/Full_Adder_2/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C816 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C817 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C818 gnd Gnd 99.87fF
+C819 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C820 Adder_4_0/Full_Adder_2/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C821 m1_287_713# Gnd 161.09fF
+C822 Adder_4_0/Full_Adder_2/m1_550_349# Gnd 11.86fF
+C823 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C824 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C825 Adder_4_0/Full_Adder_2/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C826 Adder_4_0/Full_Adder_1/OR_0/NOR_0/vdd Gnd 6.11fF
+C827 Adder_4_0/Full_Adder_1/OR_0/NOR_0/gnd Gnd 9.59fF
+C828 Adder_4_0/Full_Adder_1/OR_0/m1_35_29# Gnd 12.43fF
+C829 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C830 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C831 Adder_4_0/Full_Adder_1/m1_550_446# Gnd 112.05fF
+C832 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C833 Adder_4_0/Full_Adder_1/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C834 Adder_4_0/Full_Adder_1/m1_772_434# Gnd 12.99fF
+C835 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C836 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C837 Adder_4_0/Full_Adder_1/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C838 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C839 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C840 m1_912_711# Gnd 100.25fF
+C841 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C842 Adder_4_0/Full_Adder_1/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C843 m1_444_710# Gnd 300.50fF
+C844 Adder_4_0/Full_Adder_1/m1_550_349# Gnd 11.86fF
+C845 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C846 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C847 Adder_4_0/Full_Adder_1/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+C848 Adder_4_0/Full_Adder_0/OR_0/NOR_0/vdd Gnd 6.11fF
+C849 Adder_4_0/Full_Adder_0/OR_0/NOR_0/gnd Gnd 9.59fF
+C850 Adder_4_0/Full_Adder_0/OR_0/m1_35_29# Gnd 12.43fF
+C851 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/gnd Gnd 47.07fF
+C852 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_59_n30# Gnd 36.35fF
+C853 Adder_4_0/Full_Adder_0/m1_550_446# Gnd 112.05fF
+C854 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/a_51_n59# Gnd 14.94fF
+C855 Adder_4_0/Full_Adder_0/Half_Adder_1/XOR_0/vdd Gnd 24.60fF
+C856 Adder_4_0/m1_340_335# Gnd 166.53fF
+C857 Adder_4_0/Full_Adder_0/m1_772_434# Gnd 12.99fF
+C858 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/gnd Gnd 10.53fF
+C859 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/m1_33_33# Gnd 9.89fF
+C860 Adder_4_0/Full_Adder_0/Half_Adder_1/AND_0/NAND_0/vdd Gnd 4.65fF
+C861 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/gnd Gnd 47.07fF
+C862 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_59_n30# Gnd 36.35fF
+C863 Adder_4_0/m1_100_545# Gnd 94.47fF
+C864 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/a_51_n59# Gnd 14.94fF
+C865 Adder_4_0/Full_Adder_0/Half_Adder_0/XOR_0/vdd Gnd 24.60fF
+C866 m1_373_730# Gnd 189.81fF
+C867 Adder_4_0/Full_Adder_0/m1_550_349# Gnd 11.86fF
+C868 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/gnd Gnd 10.53fF
+C869 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/m1_33_33# Gnd 9.89fF
+C870 Adder_4_0/Full_Adder_0/Half_Adder_0/AND_0/NAND_0/vdd Gnd 4.65fF
+
+.control
+  run
+  set xbrushwidth=3.5
+  tran 1n 12800n
+
+  plot P0+14 P1+12 P2+10 P3+8 P4+6 P5+4 P6+2 P7
+    
+.endc
+
+.end

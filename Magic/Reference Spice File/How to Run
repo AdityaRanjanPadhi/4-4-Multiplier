@@ -1,0 +1,3 @@
+Delete all ".ext" and ".spice" files in the Magic folder.
+Create a spice file using commands "extract all" and "ext2spice Multiplier_4x4.ext" in the "Multiplier_4x4.mag" magic command window.
+Refer to the "Multiplier_4x4.spice" file in the reference foler to see changes to make in the spice file.

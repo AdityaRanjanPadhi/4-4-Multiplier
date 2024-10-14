@@ -1,0 +1,17 @@
+timestamp 1668079359
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use 2INV 2INV_0 1 0 44 0 1 -45
+use NOR NOR_0 1 0 1 0 1 42
+node "m1_35_0#" 0 1269 35 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 27 24 0 0 0 0
+node "m1_35_29#" 0 1692 35 29 m1 0 0 0 0 0 0 0 0 0 0 0 0 36 26 0 0 0 0
+node "m1_35_91#" 1 4512 35 91 m1 0 0 0 0 0 0 0 0 0 0 0 0 96 70 0 0 0 0
+merge "NOR_0/vdd" "2INV_0/vdd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 0 0 0 0
+merge "2INV_0/vdd" "m1_35_91#"
+merge "NOR_0/a_13_n35#" "2INV_0/a_7_74#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 0
+merge "2INV_0/a_7_74#" "m1_35_29#"
+merge "NOR_0/gnd" "2INV_0/gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 0 0 0 0
+merge "2INV_0/gnd" "m1_35_0#"
